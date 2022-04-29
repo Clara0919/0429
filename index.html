@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Clara's website</title>
+    <link rel="stylesheet" href="normalize.css">
+    <script src="https://kit.fontawesome.com/82d615f8bc.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Noto+Sans+TC:wght@100;300;400;500&display=swap');
+
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Noto Sans TC', sans-serif;
+
+        }
+
+        p {
+            line-height: 35px;
+        }
+
+        a:link {
+            color: rgb(17, 17, 17);
+        }
+
+        a:visited {
+            color: rgb(112, 112, 112);
+        }
+
+        .header {
+            display: flex;
+            justify-content: flex-end;
+            height: 70px;
+            background-color: #eff3f6;
+        }
+
+        .card {
+            display: flex;
+            height: 800px;
+            background-color: #eff3f6;
+            margin: auto;
+        }
+
+        .leftbox {
+            width: 350px;
+            height: 450px;
+            background-color: rgba(132, 184, 214, 0.815);
+            position: absolute;
+            left: 5px;
+            bottom: 5px;
+            top: 400px;
+
+        }
+
+        .leftbox img {
+            width: 350px;
+            height: 450px;
+        }
+
+        .rightbox {
+            width: 50%;
+            height: 480px;
+            background-color: #c3ced1;
+            position: absolute;
+            right: 5px;
+            top: 120px;
+        }
+
+
+        .nav {
+            padding: 10px;
+
+        }
+
+        /* .nav p {
+            margin: 0px;
+        } */
+
+        .nav:hover {
+            background: #ffffff;
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+
+        .rectangle {
+            width: 300px;
+            height: 100px;
+            background-color: #eff3f6;
+        }
+
+
+
+        .intro {
+            width: 45%;
+            height: 500px;
+            margin: 8% 19%;
+            padding: 60px;
+            background: #ffffff;
+            z-index: 1;
+
+        }
+
+        .intro h1 {
+            font-size: 50px;
+            font-family: 'Caveat', cursive;
+            padding-bottom: 15px;
+        }
+
+        .intro p {
+            line-height: 35px;
+        }
+
+        /* .profile {
+            height: 300px;
+            width: 300px;
+            background-size: contain;
+        } */
+
+        .aboutme {
+            display: flex;
+            height: 600px;
+            align-items: center;
+        }
+
+
+
+        .aboutme h1 {
+            width: 450px;
+            margin-left: 120px;
+            position: relative;
+            top: -80px;
+            font-size: 50px;
+        }
+
+        .aboutme p {
+            margin-right: 150px;
+            line-height: 35px;
+        }
+
+        .travel p {
+            line-height: 35px;
+        }
+
+        .travel {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 100px 100px 0px 100px;
+            justify-content: center;
+        }
+
+        .travelpics {
+            width: 800px;
+            height: 400px;
+        }
+
+        .travel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+
+        .why1 {
+            width: 800px;
+            height: 550px;
+            background-color: #ffffff;
+            position: relative;
+            top: -680px;
+            padding: 30px;
+        }
+
+        .photo {
+            display: flex;
+            padding-bottom: 140px;
+            margin-top: -100px;
+        }
+
+
+        .why2 {
+            width: 40%;
+            height: 550px;
+            background-color: #ffffff;
+            padding-left: 100px;
+        }
+
+
+        .carousel-item img{
+            width: 100%;
+            height: auto;
+        }
+
+        .mypic{
+            float:right;
+        }
+
+
+        .resume {
+            padding: 40px 40px 150px 40px;
+            background: #eff3f6;
+        }
+
+        .experience {
+            border-left: solid 1px gray;
+            margin-left: 150px;
+            margin-right: 100px;
+            padding-left: 90px;
+        }
+
+        /* 履歷上的小點點 */
+        .circle {
+            position: relative;
+            left: -98.5px;
+            top: 50px;
+        }
+
+        .projects {
+            display: flex;
+            margin: 0px auto;
+            padding-left: 200px;
+            padding-right: 200px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-left: 50px;
+            margin-right: 50px;
+
+        }
+
+        .project-box {
+            padding: 40px;
+            margin: auto;
+            background: white;
+        }
+
+        .blog {
+            width: 250px;
+            height: 400px;
+            margin: 10px;
+        }
+
+        .article {
+            width: 250px;
+            height: 400px;
+            margin: 10px;
+            -webkit-box-shadow: 6px 10px 20px -4px rgba(0, 0, 0, 0.55);
+            box-shadow: 6px 10px 20px -4px rgba(0, 0, 0, 0.55);
+            border-radius: 8px;
+
+        }
+
+        .blog img {
+            width: 250px;
+            height: 150px;
+            border-radius: 8px;
+        }
+
+        .blog p,
+        .blog a {
+            padding: 10px;
+            line-height: 10px;
+        }
+
+        .more {
+            width: 100px;
+            height: 100px;
+            background: #c3ced1;
+            /* opacity: 0.3; */
+            margin-left: 55px;
+            margin-top: 120px;
+            border-radius: 50%;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+        .footer {
+            background-color: #c3ced1;
+        }
+
+        .info {
+            width: 600px;
+            height: 400px;
+            border-right: solid 1px gray;
+
+        }
+
+        .form {
+            width: 600px;
+            height: 400px;
+            margin-left: 50px;
+            /* display:flex; */
+        }
+
+        .row {
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        #content {
+            height: 100px;
+        }
+
+        #b,
+        #c,
+        #d {
+            margin: 50px;
+            font-size: 70px;
+            padding-left: 45px;
+            width: 300px;
+            margin-top: 100px;
+            font-family: 'Caveat', cursive;
+        }
+
+        #b {
+            background-color: white;
+        }
+
+        #d {
+            padding-top: 50px;
+        }
+
+        #a {
+            font-family: 'Caveat', cursive;
+            font-size: 70px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+
+        <div class="header">
+            <div class="nav">
+                <a href="#a">About Me</a>
+            </div>
+            <div class="nav">
+                <a href="#b">Resume</a>
+            </div>
+            <div class="nav">
+                <a href="#c">Projects</a>
+            </div>
+            <div class="nav">
+                <a href="#d">Contact Me</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="leftbox">
+                <img src="image/plant.png" alt="">
+            </div>
+            <div class="rightbox"></div>
+            <div class="intro">
+                <h1>I'm Clara</h1>
+                <p>畢業於政治大學廣告系，擁有廣告提案、企劃書撰寫、資訊視覺化與採訪編輯相關的實務經驗。熱愛與人互動、觀察生活中的人事物，並且擁有無窮的好奇心，不放棄任何學習的機會。喜歡有創意的新點子，同時願意探索所有的可能。期許自己積極面對不同的挑戰，勇於突破舒適圈，不為自己的能力設限。
+                </p>
+            </div>
+
+        </div>
+
+        <div class="aboutme">
+
+            <div>
+                <div class="rectangle">
+                </div>
+                <h1 id="a">About Me</h1>
+            </div>
+            <div>
+                <p>如父油全加著圖把點，一人有他望團不是創著行且作熱，係了方到市商境為實場內訴公樂生動育雙方感笑。成足費的斯一命子一看展有邊同，字人決何古的所分，向身開代格甚園生年，響不是散傳日主有問一光住安頭場期故球山在太爾開便說問成他高，著手更因？人政如學年成乎林不重地處醫物務？心產結大許酒間總來，有結空工都？親低期專化，念科係參初告一超東利來生，心我這何到出約山字動！氣上美表地變，整方中賣
+                </p>
+            </div>
+        </div>
+        <div class="travel">
+            <div class="travelpics">
+                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    alt="">
+            </div>
+            <div class="travelpics">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    alt="">
+            </div>
+            <div class="travelpics">
+                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    alt="">
+            </div>
+            <div class="travelpics">
+                <img src="https://images.unsplash.com/photo-1475087542963-13ab5e611954?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    alt="">
+            </div>
+            <div class="why1">
+                <h1>旅行</h1>
+                <p>許過卻行自朋期花屋陸在那！空認母多教詩看去想以在從臺住過管有戲玩風動上突？印大女雙著開每進加子。解孩這自個路臺前起走，快灣女。賽示的不畫明能受、人家去深最體……終要已法客正有三中陸業望展清通事說我之必時以，好際知養傳求中能是巴內……長資是只府不部明，離族次我那本的出飯：小的放際一；業腳般發經樂業越快其……球於取現的怎情藝？模起客親火亞為現件辦話西市們、來車就一並他機增連年器這！
+                </p>
+            </div>
+        </div>
+        <div class="photo">
+            <div class="why2">
+                <h1>攝影
+                </h1>
+                <p>許過卻行自朋期花屋陸在那！空認母多教詩看去想以在從臺住過管有戲玩風動上突？印大女雙著開每進加子。解孩這自個路臺前起走，快灣女。賽示的不畫明能受、人家去深最體……終要已法客正有三中陸業望展清通事說我之必時以，好際知養傳求中能是巴內……長資是只府不部明，離族次我那本的出飯：小的放際一；業腳般發經樂業越快其……球於取現的怎情藝？模起客親火亞為現件辦話西市們、來車就一並他機增連年器這！
+                </p>
+            </div>
+            <div class="container">
+                <div class="row mypic">
+            <div id="banner" class="col-7">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="/image/city1.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/image/city2.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/image/city3.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/image/city4.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/image/city5.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/image/city6.jpg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="resume">
+            <h1 id="b">Resume</h1>
+            <div class="experience">
+                <div class="work">
+                    <i class="fa-solid fa-circle circle"></i>
+                    <h2>SEO數位編輯</h2>
+                    <p>微風集團</p>
+                    <p>
+
+                        -部落格內容撰寫（撰寫的文章：https://www.shopback.com.tw/blog/author/clara）<br>
+                        -結合SEO提升網站的能見度<br>
+                        -監測後台數據並及時進行優化<br>
+                        -協助企劃社群內容<br>
+                        -社群素材製作<br>
+                        -KOL洽談合作、規劃排程<br>
+                        -促銷活動上架、排程
+                    </p>
+                </div>
+                <div class="work">
+                    <i class="fa-solid fa-circle circle"></i>
+                    <h2>行銷企劃</h2>
+                    <p>aifian 諦諾智金股份有限公司</p>
+                    <p>內容行銷<br>
+                        -重新整建 aifian 部落格，根據潛在用戶感興趣的資訊結合公司服務與其他媒體渠道，在2個月間提升了單日瀏覽人次近 10 倍，多個關鍵字 Google 搜尋排名提升至第一頁。<br>
+                        -根據節令及檔期需求規劃關鍵字策略與排程，即時依據後台數據及當紅網路聲量優化部落格發布內容，單篇文章最高瀏覽次數超過 20k。<br>
+                        -管理部落格文章寫手，指定、分配指定題目，並運用 SEO 工具進行調整和優化以提升流量。<br>
+                        行銷企劃<br>
+                        -與符合品牌調性的 KOL、KOC 洽談合作，在職期間透過口碑與推薦吸引近5000名新用戶加入，佔總用戶人數 5%。<br>
+                        -根據用戶使用體驗歸結出痛點，並與產品端協調，提出相應的行銷策略。<br>
+                        -結合線下與線上全渠道，發想並執行中秋行銷專案，獲得超過 2,000 則用戶回饋。<br>
+                        -協助社群經營，藉由聲量高的題材與遊戲行銷創造流量，提升品牌曝光。</p>
+                </div>
+                <div class="work">
+                    <i class="fa-solid fa-circle circle"></i>
+                    <h2>內容行銷實習生</h2>
+                    <p>ShopBack 回饋網股份有限公司</p>
+                    <p>-部落格內容撰寫（撰寫的文章：https://www.shopback.com.tw/blog/author/clara）<br>
+                        -結合SEO提升網站的能見度<br>
+                        -監測後台數據並及時進行優化<br>
+                        -協助企劃社群內容<br>
+                        -社群素材製作<br>
+                        -KOL洽談合作、規劃排程<br>
+                        -促銷活動上架、排程</p>
+                </div>
+            </div>
+        </div>
+        <div class="project-box">
+            <h1 id="c">projects</h1>
+            <div class="projects">
+
+                <div class="blog">
+                    <div class="article">
+                        <img src="https://content.shopback.com/tw/wp-content/uploads/2020/08/25140832/20200227104704411586-1.jpeg"
+                            alt="">
+                        <a href="https://www.shopback.com.tw/blog/must-buy-food-items-from-familymart-2020">2021
+                            全家美食推薦！PTT、Dcard網友激推必吃熱門清單</a>
+                        <p>全家美食多！想知道2021 全家便利商店有哪些網路熱推美食？來看看PTT、Dcard網友必吃熱門清單，不管江原道蟹膏、泰式打拋豬還是爆漿餡餅通通有。</p>
+                    </div>
+                </div>
+                <div class="blog">
+                    <div class="article">
+                        <img src="https://content.shopback.com/tw/wp-content/uploads/2020/12/28162824/dave-weatherall-pzjdA3mhFs8-unsplash.jpg"
+                            alt="">
+                        <a href="https://www.shopback.com.tw/blog/chinese-horoscope-2021">這些生肖牛年犯太歲！2021
+                            生肖運勢解析&安太歲地點、流程整理</a>
+                        <p>牛年想要行大運就看這篇！ShopBack幫你整理了12星座2021年的運勢與注意事項，還有犯太歲的生肖與安太歲地點和方法，快來看看準沒錯！</p>
+                    </div>
+                </div>
+                <div class="blog">
+                    <div class="article">
+                        <img src="https://content.shopback.com/tw/wp-content/uploads/2021/01/15155926/zahra-tavakoli-fard-uRrBqB53So-unsplash.jpg"
+                            alt="">
+                        <a href="https://www.shopback.com.tw/blog/the-best-dessert-in-taoyuan">桃園旅遊 |
+                            桃園必吃甜點店推薦10選，千層、戚風等通通有</a>
+                        <p>冬天草莓季絕對是吃甜點的好時機，先別管胖不胖了！來看看2021 桃園人氣甜點店推薦10選，千層蛋糕、戚風任你選，快把這些桃園甜點店收入口袋名單！</p>
+                    </div>
+                </div>
+                <div class="blog">
+                    <div class="article">
+                        <img src="https://content.shopback.com/tw/wp-content/uploads/2020/07/16172637/pathway-between-tomato-fruits-1675211-1.jpg"
+                            alt="">
+                        <a href="https://www.shopback.com.tw/blog/farm-travel-coupons-2020">振興三倍再加碼 | 2020
+                            農遊券領取、使用方法、合作業者總整理</a>
+                        <p>振興三倍券再加碼！限量500萬張的農遊券來啦，2020 農遊券使用懶人包，包括農遊券領取、農遊券使用方法、跨區說明，還有合作商家一篇整理，讓你振興省錢超有感！</p>
+                    </div>
+                </div>
+                <div class="blog">
+                    <div class="article">
+                        <img src="https://content.shopback.com/tw/wp-content/uploads/2020/08/19170241/orchard-244297_640.jpg"
+                            alt="">
+                        <a href="https://www.shopback.com.tw/blog/fruit-farms-in-yilan">宜蘭旅遊｜宜蘭採水果一日遊
+                            芭樂、番茄、火龍果觀光果園隨你玩</a>
+                        <p>旅行想來點不一樣的？就到宜蘭採果樂！宜蘭觀光果園可以體驗摘芭樂、番茄、火龍果的樂趣，還能現採現吃、手做DIY，快來看看宜蘭採果一日遊怎麼玩吧。</p>
+                    </div>
+                </div>
+
+                <div class="blog">
+                    <div class="article">
+                        <img src="https://content.shopback.com/tw/wp-content/uploads/2020/08/26155935/i010004_1565856448.jpg"
+                            alt="">
+                        <a href="https://www.shopback.com.tw/blog/best-pineapple-cake-in-taiwan">2021
+                            全台鳳梨酥推薦10選，佳德、微熱山丘等年節送禮最大方</a>
+                        <p>每次年節送禮總是讓人傷透腦筋？送鳳梨酥是個安全好選擇，我們整理了2021 全台鳳梨酥推薦10選，包括佳德、微熱山丘等老牌鳳梨酥，要酸要甜隨你挑。單</p>
+                    </div>
+                </div>
+                <div class="blog">
+                    <div class="article">
+                        <img src="https://i0.wp.com/blog.aifian.com/wp-content/uploads/2021/08/0810-e694b9e78988e687b6e4babae58c85-01-1.png?w=2400&ssl=1"
+                            alt="">
+                        <a href="https://blog.aifian.com/2021/08/09/2021-how-to-use-aifian-app/">2021 aifian App
+                            改版啦！掃發票、推薦好友、購物都能賺回饋</a>
+                        <p>2021 aifian App 全新升級改版囉！想知道如何用aifian輕鬆賺取現金回饋？來看看 aifian 享擁有 app 更新懶人包，從今天起，一起用生活數據，輕鬆賺現金回饋！
+                        </p>
+                    </div>
+                </div>
+                <div class="blog">
+                    <div class="more">
+                        <p>看更多<i class="fa-solid fa-angles-right"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="footer">
+            <h1 id="d">contact</h1>
+            <div class="contact">
+                <div class="info">
+
+                    <p>Looking forward to hearing from you</p>
+                    <h3>Phone</h3>
+                    <p>123-456-7890</p>
+                    <h3>Email</h3>
+                    <p>info@mysite.com </p>
+                </div>
+                <div class="form">
+                    <form action="">
+                        <div>
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" name="name" class="row"><br>
+                            <label for="email">信箱</label>
+                            <input type="text" id="email" name="email" class="row"><br>
+                        </div>
+                        <label for="subject">主題</label>
+                        <input type="text" id="subject" name="subject" class="row"><br>
+                        <label for="content">內容</label>
+                        <input type="text" id="content" name="content" class="row"><br>
+                        <button type="submit" class="row">提交</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
